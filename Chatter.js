@@ -12,7 +12,7 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
 function addUser(){
-  window.location = "Chatter_room.html";
+    location = "Chatter_room.html";
     username = document.getElementById("user_name").value;
     firebase.database().ref("/").child(username).update({ purpose: "addingUser" });
     localStorage.setItem("UserName", username);
